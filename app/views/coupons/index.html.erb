@@ -1,0 +1,13 @@
+<h1>Coupons Index</h1>
+
+<p>Find me in app/views/coupons/index.html.erb</p>
+
+
+<% @coupons.each do |c|%>
+    code: <%= c.coupon_code %>
+    <br>
+    store: <%= c.store %>
+    <br>
+    <br>
+    More Details: <%= link_to 'FREESTUFF', coupon_path(c.id) %>
+<% end %>
